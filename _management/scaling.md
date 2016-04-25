@@ -1,6 +1,5 @@
 ---
 title: "Scaling"
-order: 800
 ---
 
 Convox allows you to scale your application's concurrency, memory allocation, and the resources available in the underlying Rack.

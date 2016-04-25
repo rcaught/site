@@ -1,6 +1,5 @@
 ---
 title: "One-off Processes"
-order: 700
 ---
 
 Convox allows you to run two different types of one-off processes. Using `convox run` you can launch a new process and run your command inside that. Using `convox exec` you can run commands against an existing process.

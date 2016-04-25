@@ -1,6 +1,5 @@
 ---
 title: "Environment"
-order: 500
 ---
 
 Convox applications are configured using environment variables.

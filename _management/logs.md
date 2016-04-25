@@ -1,6 +1,5 @@
 ---
 title: "Logs"
-order: 600
 ---
 
 You can view the live logs for a Convox application using `convox logs`:
@@ -55,17 +54,4 @@ Type     t2.medium
 $ convox logs -a demo
 2016-04-12 19:55:08 i-1d1fe49a demo/web:20160408020109 : time="2016-04-12T19:55:08Z" level=info msg="started handling request" method=GET remote="10.0.3.199:58107" request="/check"
 2016-04-12 19:55:08 i-1d1fe49a demo/web:20160408020109 : time="2016-04-12T19:55:08Z" level=info msg="completed handling request" count#status2XX=1 measure#web.elapsed=0.095ms method=GET remote="10.0.3.199:58107" request="/check" status=200 text_status=OK
-```
-
-You can use filters to understand Rack operations like what webhooks were sent:
-
-```
-$ convox logs -a demo --filter=EventSend --follow=false --since=20m
-2016-04-25T20:58:16Z web:20160425202355/1eb3f413602b aws EventSend msg="{\"action\":\"build:create\",\"status\":\"error\",\"data\":{\"app\":\"httpd\",\"id\":\"BEAIOGUJGTU\",\"message\":\"exit status 1\"},\"timestamp\":\"2016-04-25T20:58:16.428582907Z\"}"
-2016-04-25T20:58:16Z web:20160425202355/1eb3f413602b ns=kernel at=EventSend message-id="a0266efc-1cd8-54f6-bc46-21649bf06b5a"
-2016-04-25T21:00:59Z web:20160425202355/1eb3f413602b aws EventSend msg="{\"action\":\"build:create\",\"status\":\"success\",\"data\":{\"app\":\"httpd\",\"id\":\"BIRNSOLKVUC\"},\"timestamp\":\"2016-04-25T21:00:59.002442447Z\"}"
-2016-04-25T21:00:59Z web:20160425202355/1eb3f413602b ns=kernel at=EventSend message-id="1976c1a2-d4cd-5db6-a8c7-8e3a5306b920"
-2016-04-25T21:01:02Z web:20160425202355/7971b3dd9ee6 aws EventSend msg="{\"action\":\"release:create\",\"status\":\"success\",\"data\":{\"app\":\"httpd\",\"id\":\"RQYRSVEXGLD\"},\"timestamp\":\"2016-04-25T21:01:02.065567824Z\"}"
-2016-04-25T21:01:02Z web:20160425202355/7971b3dd9ee6 ns=kernel at=EventSend message-id="313b7ec7-5b3f-51a6-ba28-315fdcf1c150"
-2016-04-25T21:01:04Z web:20160425202355/7971b3dd9ee6 models EventSend msg="{\"action\":\"release:promote\",\"status\":\"success\",\"data\":{\"app\":\"httpd\",\"id\":\"RQYRSVEXGLD\",\"rack\":\"demo\"},\"timestamp\":\"2016-04-25T21:01:04.657552667Z\"}"
 ```
