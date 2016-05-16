@@ -59,16 +59,21 @@ defaults:
     values:
       subnav: blog
   - scope:
+      path: cost
+    values:
+      layout: cost
+      subnav: cost
+  - scope:
       path: docs
     values:
       layout: docs
       subnav: docs
   - scope:
-      path: team
-    values:
-      subnav: team
-  - scope:
       path: jobs
     values:
       layout: jobs
       subnav: jobs
+  - scope:
+      path: team
+    values:
+      subnav: team
