@@ -10,6 +10,8 @@ layout: base
 
 <div class="container subnav-content" role="main">
   <section id="toc" class="col-md-3 col-lg-3 visible-md-block visible-lg-block">
+    <gcse:search></gcse:search>
+
     {% for collection in site.collections %}
       {% if collection.label != "posts" %}
         <div class="collection">
@@ -37,3 +39,5 @@ layout: base
     </div>
   </section>
 </div>
+
+{% include google-cse.html %}
